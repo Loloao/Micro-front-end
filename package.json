@@ -1,0 +1,20 @@
+{
+  "name": "mkcrofrontend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ./build/run.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Loloao/Micro-front-end.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Loloao/Micro-front-end/issues"
+  },
+  "homepage": "https://github.com/Loloao/Micro-front-end#readme"
+}
