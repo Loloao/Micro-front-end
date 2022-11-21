@@ -1,0 +1,4 @@
+export const  WINDOW_CONST = {
+  CURRENT_SUB_APP: '__CURRENT_SUB_APP__',
+  ORIGIN_APP: '__ORIGIN_APP__'
+}
