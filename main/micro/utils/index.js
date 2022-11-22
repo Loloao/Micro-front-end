@@ -21,7 +21,7 @@ export const findAppByRoute = (router) => {
 
 const filterApp = (key, value) => {
   const currentApp = getList().filter(v => v[key] === value)
-  return currentApp && currentApp.length ? currentApp[0] : {}
+  return currentApp && currentApp.length ? currentApp[0] : undefined
 }
 
 // 子应用是否做了替换

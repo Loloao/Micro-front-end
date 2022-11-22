@@ -1,4 +1,5 @@
 import { fetchResource } from "../utils/fetchResource"
+import { sandBox } from "../sandBox";
 // 加载 html 的方法
 export const loadHtml = async (app) => {
   // 第一，子应用需要显示在哪里
@@ -7,10 +8,13 @@ export const loadHtml = async (app) => {
   let entry = app.entry
 
   const [dom, scripts] = await parseHtml(entry)
-  console.log(scripts)
 
   const ct = document.querySelector(container)
   ct.innerHTML = dom
+
+  scripts.forEach(v => {
+    sandBox(app, v)
+  })
 
   return app
 }

@@ -15,7 +15,10 @@ export const lifecycle = async () => {
 
   if (!nextApp) return
 
-  if (prevApp && prevApp.destroyed) {
+  if (prevApp && prevApp.unmount) {
+    if (prevApp.proxy) {
+      prevApp.proxy.inactive()
+    }
     await destroyed(prevApp)
   }
   // 这一步返回真实的 app 内容
@@ -35,13 +38,13 @@ export const beforeLoad = async (app) => {
 }
 
 export const mounted = async (app) => {
-  app && app.mounted && app.mounted()
+  app && app.mount && app.mount()
 
   await runMainLifeCycle('mounted')
 }
 
 export const destroyed = async (app) => {
-  app && app.destroyed && app.destroyed()
+  app && app.unmount && app.unmount()
   // 对应的执行主应用生命周期
   await runMainLifeCycle('destroyed')
 }

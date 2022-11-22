@@ -7,7 +7,8 @@ const filePath = {
     vue2: joinDir("vue2"),
     vue3: joinDir("vue3"),
     react16: joinDir("react16"),
-    service: joinDir("service")
+    service: joinDir("service"),
+    main: joinDir("main"),
 }
 
 function runChild() {

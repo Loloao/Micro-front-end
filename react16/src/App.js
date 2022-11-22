@@ -5,6 +5,7 @@ function App() {
   return (
     <div className="App">
       {/* kankan */}
+      <div>react16</div>
       <BasicMap />
     </div>
   );

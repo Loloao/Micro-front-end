@@ -30,8 +30,9 @@ export const start = () => {
 
     const url = pathname + hash
     window.history.pushState('', '', url)
+    
+    window[WINDOW_CONST.CURRENT_SUB_APP] = app.activeRule
   }
 
   // 防止触发多次路由拦截
-  window[WINDOW_CONST.CURRENT_SUB_APP] = app.activeRule
 }
