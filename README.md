@@ -868,3 +868,11 @@ export const prefetch = async () => {
   await Promise.all(list.map(async item => await parseHtml(item.entry, item.name)))
 }
 ```
+
+## 自动部署和发布
+
+首先部署一个可以进行发布子版本的网页
+![发布请求](./%E5%8F%91%E5%B8%83.png)
+在应用下新建一个文件夹 version 保存各个子应用的版本
+
+在点击发布之后发送一个请求，直接在后台对子应用进行打包，生成对应版本文件夹，并在文件夹下放置子应用打包后的代码，之后直接把资源放进资源文件夹即可
